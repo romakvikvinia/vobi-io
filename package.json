@@ -1,0 +1,33 @@
+{
+  "name": "vobi-apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client": "npm start --prefix=client",
+    "sever": "nodemon server.js",
+    "dev": "concurrently --names \"server,client\" \"npm run sever --silent\" \"npm run client --silent\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/romakvivkinia/vobi-apollo.git"
+  },
+  "author": "Roma",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/romakvivkinia/vobi-apollo#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
